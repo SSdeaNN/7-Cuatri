@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Producto</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-title">Producto Destacado</div><br />
+
+          <div class="card-image">
+            <img src="images/xbox.jpg" alt="Producto">
+          </div>
+
+          <div class="card-content">
+            <p>El Xbox Series S es una consola next-gen que acompañará a Xbox Series X en su lanzamiento. Es una versión más pequeña y más barata que Xbox Series X, sin lector de discos, pero casi igual de potente.</p>
+
+            <div id="especificaciones" class="especificaciones">
+              <p></p>
+              <p></p>
+              <p>-CPU: 8 núcleos</p>
+              <p>-Resolución: 1440p hasta 120fps</p>
+              <p>-Almacenamiento: 512GB SSD</p>
+            </div>
+
+            <button class="btn btn-agregar waves-effect waves-light" style="float: right;" class onclick="agregarCarrito()">Agregar al Carrito</button>
+          </div>
+
+          <div class="card-action">
+            <a href="#" id="toggle-link" class="right" onclick="toggleEspecificaciones()">Ver Más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    function agregarCarrito() {
+      M.toast({ html: '¡Producto agregado al carrito!', classes: 'rounded' });
+    }
+
+    function toggleEspecificaciones() {
+      const especificaciones = document.getElementById('especificaciones');
+      const toggleLink = document.getElementById('toggle-link');
+
+      if (especificaciones.style.display === 'none') {
+        especificaciones.style.display = 'block';
+        toggleLink.textContent = 'Ver Menos';
+      } else {
+        especificaciones.style.display = 'none';
+        toggleLink.textContent = 'Ver Más';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('especificaciones').style.display = 'none';
+    });
+  </script>
+</body>
+</html>

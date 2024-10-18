@@ -1,0 +1,43 @@
+ 
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .card {
+      margin-top: 50px;
+      transition: box-shadow 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+      font-weight: 700;
+      color: #004d40;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #424242;
+    }
+
+    .card-action a {
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    .btn-agregar {
+      margin-top: 10px;
+      background-color: #00796b;
+    }
+
+    .card-title{
+      color: black;
+      text-align: center;
+    }
+
+    .card-action{
+      align-content: space-around;
+    }
